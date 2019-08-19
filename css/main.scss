@@ -1,0 +1,113 @@
+#root {
+    --dark-shades: #14262B;
+    --dark-accent: #6C8191;
+    --primary: #98687C;
+    --light-accent: #919A98;
+    --light-shades: #F3EEEF;
+
+    --facebook: #3b5998;
+    --linkedin: #0077b5;
+    --twitter: #55acee;
+    --youtube: #b31217;
+}
+
+html, body {
+    margin: 0;
+    padding:0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    box-sizing: border-box;
+}
+
+nav {
+    padding: 16px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    ul {
+        
+        list-style-type: none;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        li {
+            padding: 20px;
+            a {
+                text-decoration: none;
+                color: var(--dark-shades);
+            }
+        }
+    }
+}
+
+section.hero {
+    img {
+        width: 100%;
+    }
+}
+
+section.about {
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @media(max-width:600px){
+        flex-direction: column;
+    }
+    >div {
+        width: 50%;
+        @media(max-width:600px) {
+            width: 80%;
+        }
+    }
+    .text {
+        padding: 20px;
+        background: #eee;
+        line-height: 2em;
+        margin: 12px;
+    }
+    .profiles {
+        display: flex;
+        flex-direction: row;
+        .profile {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            img {
+                width: 60%;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+
+section.mobile {
+    background: url('/images/Phones_bg2.jpg');
+    color: white;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    p {
+        max-width: 600px;
+    }
+}
+
+section.blog {
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    padding: 30px;
+    background: #2d3142;
+    color: white;
+}
